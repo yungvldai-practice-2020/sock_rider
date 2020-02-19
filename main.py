@@ -7,6 +7,8 @@ app = socketio.WSGIApp(sio, static_files={
     '/': {'content_type': 'text/html', 'filename': 'index.html'}
 })
 
+mech.init()
+
 
 @sio.event
 def connect(sid, environ):
