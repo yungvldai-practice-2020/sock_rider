@@ -1,3 +1,6 @@
+import RPi.GPIO as RPIO
+
+
 def go(direction):
     print('go', direction)
     pass
