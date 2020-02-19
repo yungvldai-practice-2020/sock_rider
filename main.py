@@ -20,6 +20,7 @@ def disconnect(sid):
 
 @sio.on('go')
 def go(sid, data):
+    print(type(data))
     mech.go(data)
 
 
