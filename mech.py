@@ -1,7 +1,7 @@
 import RPi.GPIO as GPIO
 
 
-pins_on = [21, 22, 23, 24]
+pins_on = [11, 13, 15, 19]
 
 
 def left_right_motors_off():
@@ -11,18 +11,18 @@ def left_right_motors_off():
 
 def left_motor_on(ward):
     level = True if ward == 'forward' else False
-    GPIO.output(21, level)
-    GPIO.output(22, not level)
+    GPIO.output(11, level)
+    GPIO.output(13, not level)
 
 
 def right_motor_on(ward):
     level = True if ward == 'forward' else False
-    GPIO.output(23, level)
-    GPIO.output(24, not level)
+    GPIO.output(15, level)
+    GPIO.output(19, not level)
 
 
 def init():
-    GPIO.setmode(GPIO.BCM)
+    GPIO.setmode(GPIO.BOARD)
     GPIO.setwarnings(False)
     for pin in pins_on:
         GPIO.setup(pin, GPIO.OUT)
