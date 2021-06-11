@@ -5,4 +5,4 @@ monotonic==1.5
 python-engineio==3.11.2
 python-socketio==4.4.0
 six==1.14.0
-websockets==8.1
+websockets==9.1
